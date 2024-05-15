@@ -9,21 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let layout = [
-        GridItem(.adaptive(minimum: 80, maximum: 120)),
-        GridItem(.adaptive(minimum: 80, maximum: 120)),
-        GridItem(.adaptive(minimum: 80, maximum: 120))
+    let columns = [
+        GridItem(.adaptive(minimum: 150))
     ]
     
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+    let missions: [Mission] = Bundle.main.decode("missions.json")
+    
     var body: some View {
-        Button("Decode astro") {
-            let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
-            print(astronauts.count)
-        }
-        
-        Button("Decode mission") {
-            let missions: [Mission] = Bundle.main.decode("missions.json")
-            print(missions)
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 24) {
+                    ForEach(missions) { mission in
+                        NavigationLink {
+                            Text(mission.description)
+                        } label: {
+                            VStack(spacing: 4) {
+                                Image(mission.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                
+                                VStack {
+                                    Text(mission.displayName)
+                                        .font(.headline)
+                                    Text(mission.formattedLaunchDate)
+                                        .font(.caption)
+                                }
+                                .frame(maxWidth: .infinity)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -44,7 +62,19 @@ struct Mission: Codable, Identifiable {
     let id: Int
     let crew: [CrewRole]
     let description: String
-    let launchDate: String?
+    let launchDate: Date?
+    
+    var displayName: String {
+        "Apollo \(id)"
+    }
+    
+    var image: String {
+        "apollo\(id)"
+    }
+    
+    var formattedLaunchDate: String {
+        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    }
 }
 
 

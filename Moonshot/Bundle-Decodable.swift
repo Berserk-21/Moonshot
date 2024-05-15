@@ -16,6 +16,9 @@ extension Bundle {
         guard let data = try? Data(contentsOf: url) else { fatalError("Failed to create Data from url:\(url)") }
         
         let decoder = JSONDecoder()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(formatter)
         
         do {
             return try decoder.decode(T.self, from: data)
@@ -31,4 +34,6 @@ extension Bundle {
             fatalError("Failed to decode \(file) from bundle: \(error.localizedDescription)")
         }
     }
+    
+    
 }
