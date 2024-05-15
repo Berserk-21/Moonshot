@@ -16,9 +16,14 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        Button("Decode") {
-            let astronauts = Bundle.main.decode("astronauts")
+        Button("Decode astro") {
+            let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
             print(astronauts.count)
+        }
+        
+        Button("Decode mission") {
+            let missions: [Mission] = Bundle.main.decode("missions.json")
+            print(missions)
         }
     }
 }
@@ -29,6 +34,18 @@ struct Astronaut: Codable, Identifiable {
     let description: String
 }
 
+struct Mission: Codable, Identifiable {
+    
+    struct CrewRole: Codable {
+        let name: String
+        let role: String
+    }
+    
+    let id: Int
+    let crew: [CrewRole]
+    let description: String
+    let launchDate: String?
+}
 
 
 #Preview {
