@@ -10,15 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink() {
-                Text("Detail View")
-            } label: {
-                VStack {
-                    Text("This is the title")
-                    Text("This is the subtitle")
-                    Image(systemName: "face.smiling")
+            List(0..<100) { row in
+                NavigationLink("Row \(row)") {
+                    Text("Detail \(row)")
                 }
-                .font(.largeTitle)
             }
             .navigationTitle("SwiftUI")
         }
