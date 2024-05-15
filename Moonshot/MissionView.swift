@@ -35,5 +35,12 @@ struct MissionView: View {
         .navigationTitle(mission.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .background(.darkBackground)
+        .preferredColorScheme(.dark)
     }
+}
+
+#Preview {
+    let missions: [Mission] = Bundle.main.decode("missions.json")
+    
+    return MissionView(mission: missions[0])
 }
