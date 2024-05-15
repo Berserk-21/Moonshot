@@ -16,15 +16,20 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: layout, content: {
-                ForEach(0..<100) {
-                    Text("Item \($0)")
-                }
-            })
+        Button("Decode") {
+            let astronauts = Bundle.main.decode("astronauts")
+            print(astronauts.count)
         }
     }
 }
+
+struct Astronaut: Codable, Identifiable {
+    let id: String
+    let name: String
+    let description: String
+}
+
+
 
 #Preview {
     ContentView()
