@@ -15,6 +15,7 @@
 		2CB59ED12BF4C6260007FBFA /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB59ECF2BF4C6260007FBFA /* astronauts.json */; };
 		2CB59ED32BF4C6A20007FBFA /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB59ED22BF4C6A20007FBFA /* Bundle-Decodable.swift */; };
 		2CB59ED52BF4EB0C0007FBFA /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB59ED42BF4EB0C0007FBFA /* Color-Theme.swift */; };
+		2CB59ED72BF4EDDA0007FBFA /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB59ED62BF4EDDA0007FBFA /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2CB59ECF2BF4C6260007FBFA /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		2CB59ED22BF4C6A20007FBFA /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		2CB59ED42BF4EB0C0007FBFA /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		2CB59ED62BF4EDDA0007FBFA /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2CB59EC02BF4B9560007FBFA /* MoonshotApp.swift */,
 				2CB59EC22BF4B9560007FBFA /* ContentView.swift */,
 				2CB59ED22BF4C6A20007FBFA /* Bundle-Decodable.swift */,
+				2CB59ED62BF4EDDA0007FBFA /* MissionView.swift */,
 				2CB59ED42BF4EB0C0007FBFA /* Color-Theme.swift */,
 				2CB59EC42BF4B9570007FBFA /* Assets.xcassets */,
 				2CB59ECF2BF4C6260007FBFA /* astronauts.json */,
@@ -155,6 +158,7 @@
 				2CB59EC12BF4B9560007FBFA /* MoonshotApp.swift in Sources */,
 				2CB59ED32BF4C6A20007FBFA /* Bundle-Decodable.swift in Sources */,
 				2CB59ED52BF4EB0C0007FBFA /* Color-Theme.swift in Sources */,
+				2CB59ED72BF4EDDA0007FBFA /* MissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
