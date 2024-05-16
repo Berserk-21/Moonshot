@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var showGrid = false
+    
     let columns = [
         GridItem(.adaptive(minimum: 150))
     ]
@@ -56,6 +58,11 @@ struct ContentView: View {
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar {
+                Button(showGrid ? "Grid" : "List") {
+                    showGrid.toggle()
+                }
+            }
         }
     }
 }
