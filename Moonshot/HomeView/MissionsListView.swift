@@ -16,7 +16,7 @@ struct MissionsListView: View {
         List {
             ForEach(missions) { mission in
                 NavigationLink {
-                    MissionView(mission: mission, astronauts: astronauts)
+                    MissionDetailView(mission: mission, astronauts: astronauts)
                 } label: {
                     HStack {
                         Image(mission.image)

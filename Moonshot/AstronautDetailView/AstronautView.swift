@@ -1,5 +1,5 @@
 //
-//  AstronautView.swift
+//  AstronautDetailView.swift
 //  Moonshot
 //
 //  Created by Berserk on 16/05/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AstronautView: View {
+struct AstronautDetailView: View {
     
     let astronaut: Astronaut
     
@@ -33,5 +33,5 @@ struct AstronautView: View {
 #Preview {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
-    return AstronautView(astronaut: astronauts["aldrin"]!)
+    return AstronautDetailView(astronaut: astronauts["aldrin"]!)
 }

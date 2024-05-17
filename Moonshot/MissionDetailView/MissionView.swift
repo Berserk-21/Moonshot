@@ -1,5 +1,5 @@
 //
-//  MissionView.swift
+//  MissionDetailView.swift
 //  Moonshot
 //
 //  Created by Berserk on 15/05/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MissionView: View {
+struct MissionDetailView: View {
     
     let mission: Mission
     let crew: [CrewMember]
@@ -65,5 +65,5 @@ struct MissionView: View {
     let missions: [Mission] = Bundle.main.decode("missions.json")
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
-    return MissionView(mission: missions[1], astronauts: astronauts)
+    return MissionDetailView(mission: missions[1], astronauts: astronauts)
 }

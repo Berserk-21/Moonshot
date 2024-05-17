@@ -21,7 +21,7 @@ struct MissionsGridView: View {
             LazyVGrid(columns: columns, spacing: 24) {
                 ForEach(missions) { mission in
                     NavigationLink {
-                        MissionView(mission: mission, astronauts: astronauts)
+                        MissionDetailView(mission: mission, astronauts: astronauts)
                     } label: {
                         VStack(spacing: 4) {
                             Image(mission.image)

@@ -72,18 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				2CB59EC02BF4B9560007FBFA /* MoonshotApp.swift */,
-				2CB59EC22BF4B9560007FBFA /* HomeView.swift */,
-				2CB59EDE2BF611CE0007FBFA /* MissionsGridView.swift */,
-				2CB59ED22BF4C6A20007FBFA /* Bundle-Decodable.swift */,
-				2CB59EE02BF612460007FBFA /* MissionsListView.swift */,
-				2CB59ED62BF4EDDA0007FBFA /* MissionView.swift */,
-				2CB59EDC2BF60E200007FBFA /* HorizontalDividerView.swift */,
-				2CB59EDA2BF60D4A0007FBFA /* CrewMembersView.swift */,
-				2CB59ED82BF6018F0007FBFA /* AstronautView.swift */,
-				2CB59ED42BF4EB0C0007FBFA /* Color-Theme.swift */,
-				2CB59EC42BF4B9570007FBFA /* Assets.xcassets */,
-				2CB59ECF2BF4C6260007FBFA /* astronauts.json */,
-				2CB59ECE2BF4C6260007FBFA /* missions.json */,
+				2CB59F002BF753110007FBFA /* HomeView */,
+				2CB59F022BF753430007FBFA /* MissionDetailView */,
+				2CB59F032BF7536E0007FBFA /* AstronautDetailView */,
+				2CB59F012BF7531E0007FBFA /* Extensions */,
+				2CB59F042BF753810007FBFA /* Ressources */,
 				2CB59EC62BF4B9570007FBFA /* Preview Content */,
 			);
 			path = Moonshot;
@@ -95,6 +88,53 @@
 				2CB59EC72BF4B9570007FBFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CB59F002BF753110007FBFA /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2CB59EC22BF4B9560007FBFA /* HomeView.swift */,
+				2CB59EDE2BF611CE0007FBFA /* MissionsGridView.swift */,
+				2CB59EE02BF612460007FBFA /* MissionsListView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		2CB59F012BF7531E0007FBFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CB59ED22BF4C6A20007FBFA /* Bundle-Decodable.swift */,
+				2CB59ED42BF4EB0C0007FBFA /* Color-Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CB59F022BF753430007FBFA /* MissionDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2CB59ED62BF4EDDA0007FBFA /* MissionView.swift */,
+				2CB59EDA2BF60D4A0007FBFA /* CrewMembersView.swift */,
+				2CB59EDC2BF60E200007FBFA /* HorizontalDividerView.swift */,
+			);
+			path = MissionDetailView;
+			sourceTree = "<group>";
+		};
+		2CB59F032BF7536E0007FBFA /* AstronautDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2CB59ED82BF6018F0007FBFA /* AstronautView.swift */,
+			);
+			path = AstronautDetailView;
+			sourceTree = "<group>";
+		};
+		2CB59F042BF753810007FBFA /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				2CB59ECF2BF4C6260007FBFA /* astronauts.json */,
+				2CB59ECE2BF4C6260007FBFA /* missions.json */,
+				2CB59EC42BF4B9570007FBFA /* Assets.xcassets */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
