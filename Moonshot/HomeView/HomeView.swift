@@ -35,12 +35,6 @@ struct HomeView: View {
     }
 }
 
-struct Astronaut: Codable, Identifiable {
-    let id: String
-    let name: String
-    let description: String
-}
-
 struct Mission: Codable, Identifiable, Hashable {
     
     struct CrewRole: Codable, Hashable {
