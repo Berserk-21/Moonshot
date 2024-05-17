@@ -20,9 +20,9 @@ struct MissionsGridView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 24) {
                 ForEach(missions) { mission in
-                    NavigationLink {
-                        MissionDetailView(mission: mission, astronauts: astronauts)
-                    } label: {
+                    
+                    // With navigation link value hashable.
+                    NavigationLink(value: mission.id) {
                         VStack(spacing: 4) {
                             Image(mission.image)
                                 .resizable()
@@ -48,6 +48,41 @@ struct MissionsGridView: View {
                                 .stroke(.lightBackground)
                         }
                     }
+                    
+                    // With navigation link.
+//                    NavigationLink {
+//                        MissionDetailView(mission: mission, astronauts: astronauts)
+//                    } label: {
+//                        VStack(spacing: 4) {
+//                            Image(mission.image)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 100, height: 100)
+//                                .padding()
+//                            
+//                            VStack {
+//                                Text(mission.displayName)
+//                                    .font(.headline)
+//                                    .foregroundStyle(.white)
+//                                Text(mission.formattedLaunchDate)
+//                                    .font(.caption)
+//                                    .foregroundStyle(.white)
+//                            }
+//                            .frame(maxWidth: .infinity)
+//                            .padding(.vertical)
+//                            .background(.lightBackground)
+//                        }
+//                        .clipShape(.rect(cornerRadius: 10))
+//                        .overlay {
+//                            RoundedRectangle(cornerRadius: 10)
+//                                .stroke(.lightBackground)
+//                        }
+//                    }
+                }
+            }
+            .navigationDestination(for: Int.self) { missionId in
+                if let mission = missions.first(where: { $0.id == missionId }) {
+                    MissionDetailView(mission: mission, astronauts: astronauts)
                 }
             }
             .padding([.horizontal, .bottom])
