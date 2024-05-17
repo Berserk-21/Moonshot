@@ -22,7 +22,7 @@ struct MissionsGridView: View {
                 ForEach(missions) { mission in
                     
                     // With navigation link value hashable.
-                    NavigationLink(value: mission.id) {
+                    NavigationLink(value: mission) {
                         VStack(spacing: 4) {
                             Image(mission.image)
                                 .resizable()
@@ -80,10 +80,8 @@ struct MissionsGridView: View {
 //                    }
                 }
             }
-            .navigationDestination(for: Int.self) { missionId in
-                if let mission = missions.first(where: { $0.id == missionId }) {
-                    MissionDetailView(mission: mission, astronauts: astronauts)
-                }
+            .navigationDestination(for: Mission.self) { mission in
+                MissionDetailView(mission: mission, astronauts: astronauts)
             }
             .padding([.horizontal, .bottom])
         }
