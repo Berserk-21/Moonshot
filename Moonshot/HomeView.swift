@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Moonshot
 //
 //  Created by Berserk on 15/05/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     
     @State private var showGrid = false
     
@@ -72,5 +72,5 @@ struct Mission: Codable, Identifiable {
 
 
 #Preview {
-    ContentView()
+    HomeView()
 }
